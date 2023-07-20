@@ -23,7 +23,7 @@ Lütfen katkı sunmaktan, şu da eklenebilir dediğiniz noktaları iletmekten ç
 
 ### _Projeler_:
 
-- https://<[link](https://github.com/Tugcekaner/newProject_ProjectMap)> - E-ticaret projesi
+- https://<[Proje-1](https://github.com/Tugcekaner/newProject_ProjectMap)> - E-ticaret projesi
 
 
   
