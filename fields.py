@@ -32,7 +32,8 @@
 # * (primary key) göstermesini sağlar. İlişkisel veritabanı yapıları oluşturmak için kullanılır.
  
 # ? ManyToManyField: 
-# * Birden fazla modeli ilişkilendiren çok-noktalar arası (many-to-many) ilişkileri temsil eder. Örneğin, bir etkinlikte birden çok konuşmacı ve bir konuşmacının birden çok etkinlikte yer alması gibi senaryolarda kullanılır.
+# * Birden fazla modeli ilişkilendiren çok-noktalar arası (many-to-many) ilişkileri temsil eder. 
+# * Örneğin, bir etkinlikte birden çok konuşmacı ve bir konuşmacının birden çok etkinlikte yer alması gibi senaryolarda kullanılır.
  
 # ? EmailField: 
 # * Geçerli bir e-posta adresini temsil eder. E-posta adreslerini tutmak için kullanılır.
