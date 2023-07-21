@@ -54,9 +54,28 @@
 # * diğer özel karakterleri uygun şekilde işler. Bu şekilde, bir metni URL'de kullanılmak üzere 
 # * uygun hale getirir ve olası URL uyumsuzluklarını önler.
 
+# ? from django.shortcuts import get_object_or_404
+# * get_object_or_404, Django web çerçevesindeki django.shortcuts modülünden bir fonksiyondur. 
+# * Bu fonksiyon, veritabanından belirli bir model nesnesini almak için kullanılır. 
+# * Eğer nesne bulunamazsa, HTTP 404 "Not Found" hatası döndürerek kullanıcıya uygun bir 
+# * hata sayfası gösterilmesini sağlar.
+# * Bu fonksiyon, özellikle Django projelerinde genellikle detay sayfalarında ve veritabanı nesnelerine 
+# * erişimde sıklıkla kullanılır. Verilen model ve arama kriterleri ile nesneyi almaya çalışır ve 
+# * nesneyi bulamazsa Django, varsayılan olarak "Page Not Found" (404) hatasını döndürür. 
+# * Böylece kullanıcılar, kayıtlı olmayan bir öğeye erişmeye çalıştıklarında uygun bir hata sayfası görürler.
 
+# ? from django.shortcuts import render
+# * from django.shortcuts import render ifadesi, Django web çerçevesinde template tabanlı görüntüleme 
+# * (view) fonksiyonlarını oluşturmak için kullanılan bir import ifadesidir. Bu ifade, Django'da 
+# * bir kullanıcı isteğine yanıt olarak bir HTML şablonu içeriğini görüntülemek için kullanılan bir yöntemi çağırmayı sağlar.
+# * render fonksiyonu, HTTP yanıtlarını oluşturmak için kullanılır ve genellikle Django projelerindeki 
+# * view fonksiyonları içinde kullanılır. Bu fonksiyon, bir HTML şablonunu kullanıcıya göstermek için kullanılan 
+# * Django projesinin "şablon motoru" ile entegre çalışır.
 
-
-
-
+# ? from django.shortcuts import redirect
+# * from django.shortcuts import redirect ifadesi, Django web çerçevesinde sayfa yönlendirmeleri yapmak için kullanılan 
+# * bir import ifadesidir. Bu ifade, Django projesinde bir kullanıcı isteğine yanıt olarak, belirtilen URL'ye yönlendirme 
+# * işlemlerini gerçekleştirmek için kullanılır.
+# * redirect fonksiyonu, belirtilen URL'ye yönlendirmek için kullanılır. Bu, kullanıcının bir sayfada form gönderdikten sonra 
+# * başka bir sayfaya yönlendirilmesi veya belirli bir sayfaya otomatik olarak yönlendirilmesi gereken durumlarda kullanışlıdır.
 
