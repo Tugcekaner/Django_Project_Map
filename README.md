@@ -38,8 +38,13 @@ Lütfen katkı sunmaktan, şu da eklenebilir dediğiniz noktaları iletmekten ç
   
 ## _Yazarlar ve Teşekkür_
 
-- [@Tugcekaner](https://github.com/Tugcekaner) - Oluşturucu
+- [@Tugcekaner](https://github.com/Tugcekaner) - Proje sahibi
 
+
+
+- [@mcban34](https://github.com/mcban34) - Eğitmen
+- [@ulgerb](https://github.com/ulgerb) - Eğitmen
+- [@MervanKoncuk](https://github.com/MervanKoncuk) - Eğitmen
   
 ## _Katkı_
 
