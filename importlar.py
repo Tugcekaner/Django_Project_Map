@@ -79,3 +79,69 @@
 # * redirect fonksiyonu, belirtilen URL'ye yönlendirmek için kullanılır. Bu, kullanıcının bir sayfada form gönderdikten sonra 
 # * başka bir sayfaya yönlendirilmesi veya belirli bir sayfaya otomatik olarak yönlendirilmesi gereken durumlarda kullanışlıdır.
 
+# ? import time
+# * import time ifadesi, Python'daki standart kütüphaneden bir modül olan time modülünü içe aktarmak için kullanılır. 
+# * Django ile doğrudan bir ilişkisi yoktur, ancak Python dilinde zamanla ilgili işlemleri yapmak için kullanılan önemli bir modüldür.
+# * time modülü, zamanla ilgili işlevleri içerir ve çeşitli zaman işlemlerini gerçekleştirmek için kullanılır. 
+# * Bu modülü içe aktardığınızda, zaman işlemleri için işlevler ve sabitler kullanılabilir.
+# * Bazı yaygın kullanılan time modülü işlevleri şunlardır:
+# ! time.time():Şu anki zamandan, 1970-01-01 00:00:00 UTC'den geçen saniye sayısını döndürür. 
+# * Bu, Unix zamanı olarak da bilinir ve zaman damgası olarak adlandırılır.
+# ! time.sleep(seconds):Belirtilen süre kadar (saniye cinsinden) işlemi duraklatır. 
+# * Bu, belirli bir zaman gecikmesi eklemek veya işlemciyi belirli bir süre boyunca uyutmak için kullanılabilir.
+# ! time.localtime():Şu anki yerel zamanı döndürür ve bunu bir zaman tuplesi şeklinde sunar 
+# * (yıl, ay, gün, saat, dakika, saniye, haftanın günü, yılın günü, yaz saati uygulaması).
+# ! time.strftime(format, time_tuple):Zaman tupelini belirtilen biçimlendirme şablonuna göre biçimlendirerek, 
+# * insanlar tarafından okunabilir bir şekilde zaman dizesi oluşturur.
+# ! time.gmtime():Şu anki zamanı UTC zamanı olarak döndürür.
+# * Bu işlevler, zamanla ilgili işlemler yapmak istediğinizde veya belirli bir gecikme eklemek istediğinizde kullanışlı olabilir. 
+# * Örneğin, bir işlemi belirli aralıklarla yürütmek, zaman damgası içeren verileri işlemek veya 
+# * belirli bir süre beklemek için time modülünü kullanabilirsiniz.
+
+# ? from django.contrib import messages
+# * from django.contrib import messages ifadesi, Django'nun messages framework'ünü kullanmak için django.contrib.messages modülünü 
+# * içe aktarır. Bu modül, web uygulamanızda kullanıcıya mesajlar göndermenize ve görüntülemenize olanak tanır. 
+# * Kullanıcıya farklı durumlarda bilgi, uyarı, hata veya başarı mesajları göstermek için kullanılır.
+# * messages framework'ü, HTTP isteklerinin birinden diğerine veri taşımak için kullanılan oturumlarla ilgilenir. 
+# * Böylece, bir sayfada oluşturulan mesaj, kullanıcı diğer sayfaya geçtiğinde veya sayfayı yenilediğinde bile gösterilebilir.
+# * Django'da messages framework'ü kullanırken, çeşitli mesaj türleri mevcuttur:
+# * messages.info(request, message): Bilgi mesajı göstermek için kullanılır. 
+# * Genellikle kullanıcıya bilgi vermek için kullanılır.
+# * messages.success(request, message): Başarı mesajı göstermek için kullanılır. 
+# * Kullanıcı, bir eylemi başarıyla tamamladığında veya olumlu bir geribildirim verildiğinde kullanılır.
+# * messages.warning(request, message): Uyarı mesajı göstermek için kullanılır. 
+# * Kullanıcıyı bir durum hakkında uyarmak veya dikkatini çekmek için kullanılır.
+# * messages.error(request, message): Hata mesajı göstermek için kullanılır. 
+# * Bir hata durumu veya beklenmeyen bir durumla karşılaşıldığında kullanıcıya bilgi vermek için kullanılır.
+# * Bu mesaj türleri, kullanıcı deneyimini iyileştirmek ve kullanıcılara önemli bilgileri aktarmak için 
+# * web uygulamanızda kullanışlıdır. Örneğin, bir kullanıcı hesap oluşturduğunda başarı mesajı gösterebilir, 
+# * bir formu başarılı bir şekilde gönderdiğinde bilgi mesajı gösterebilir veya bir işlemde hata oluştuğunda hata mesajı gösterebilirsiniz.
+# * Mesajları oluşturduktan sonra, bu mesajları şablon dosyalarınızda veya görüntüleme işlevlerinizde kullanarak 
+# * kullanıcıya gösterebilirsiniz. Bu, kullanıcının geri bildirim alması ve etkileşimli bir deneyim yaşaması açısından önemlidir.
+
+# ? from django.contrib.auth import login, logout, authenticate
+# * from django.contrib.auth ifadesi, Django'da kullanıcı kimlik doğrulama ve yetkilendirme işlemleri için gerekli olan 
+# * fonksiyonları ve sınıfları içeren auth (authentication) modülünü içe aktarır. Bu modül, web uygulamanızda kullanıcıları 
+# * sisteme giriş yapmalarını, oturum açmalarını, çıkış yapmalarını ve kimlik doğrulama işlemlerini yönetmenize olanak tanır.
+# * İşte içe aktarılan fonksiyonların ve sınıfların açıklamaları:
+# * login(request, user): Bu fonksiyon, kullanıcı oturumunu başlatmak için kullanılır. 
+# * Kullanıcı adı ve parola gibi kimlik bilgilerini doğruladıktan sonra authenticate() fonksiyonuyla kimlik doğrulama yapılır ve 
+# * eğer kullanıcı bilgileri geçerliyse, login() fonksiyonu ile kullanıcı oturumu başlatılır. request parametresi, 
+# * kullanıcının tarayıcısı ile sunucu arasında bilgi alışverişi sağlar. user parametresi ise kimlik doğrulaması başarılı olan 
+# * kullanıcı nesnesini temsil eder.
+# * logout(request): Bu fonksiyon, mevcut kullanıcının oturumunu sonlandırmak için kullanılır. 
+# * Kullanıcı çıkış yapmak istediğinde logout() fonksiyonu çağrılır ve kullanıcının oturumu sonlandırılır.
+# * authenticate(request, username=None, password=None): Bu fonksiyon, kullanıcının kimlik bilgilerini doğrulamak için kullanılır. 
+# * Kullanıcı adı ve parola parametreleriyle çağrılır. Eğer kullanıcı adı ve parola doğruysa, kimlik doğrulaması 
+# * başarılı bir şekilde gerçekleşir ve kimlik doğrulanmış kullanıcı nesnesi döndürülür. Doğrulama başarısız olursa None döner.
+# * Bu fonksiyonlar, Django'da kullanıcı kimlik doğrulama ve oturum yönetimi işlemlerini kolaylaştırır. 
+# * Web uygulamanızda kullanıcıları yetkilendirmek, sayfalara erişim kontrolü sağlamak ve kullanıcıların oturum açma ve 
+# * çıkış yapma işlemlerini yönetmek için django.contrib.auth modülünden bu fonksiyonları kullanabilirsiniz. 
+# * Bu sayede Django, güvenli ve kullanıcı dostu bir kimlik doğrulama süreci sunar.
+
+
+
+
+
+
+
